@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Boostrap Calculator | Minor Project 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="head" style="margin-top: 30px;">
+            <h3
+                style=" color:azure ;text-align:center; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ">
+                Simple Calculator</h3>
+        </div>
+    </header>
+    <div class="calc-container flex-column flex-md-row">
+        <div class="calculator">
+            <div id="display" class="display">0</div>
+            <div class="row">
+                <div class="col-3"><button class="btn btn-danger" onclick="clearDisplay()">C</button></div>
+                <div class="col-3"><button class="btn btn-blue" onclick="append('Math.PI')">π</button></div>
+                <div class="col-3"><button class="btn btn-blue" onclick="append('Math.E')">e</button></div>
+                <div class="col-3"><button class="btn btn-warning" onclick="backspace()"><i
+                            class="bi bi-backspace-fill"></i></button></div>
+            </div>
+
+            <div class="row">
+                <div class="col-3"><button class="btn btn-grey" onclick="append('7')">7</button></div>
+                <div class="col-3"><button class="btn btn-grey" onclick="append('8')">8</button></div>
+                <div class="col-3"><button class="btn btn-grey" onclick="append('9')">9</button></div>
+                <div class="col-3"><button class="btn btn-secondary" onclick="append('-')">-</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col-3"><button class="btn btn-grey" onclick="append('4')">4</button></div>
+                <div class="col-3"><button class="btn btn-grey" onclick="append('5')">5</button></div>
+                <div class="col-3"><button class="btn btn-grey" onclick="append('6')">6</button></div>
+                <div class="col-3"><button class="btn btn-secondary" onclick="append('+')">+</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col-3"><button class="btn btn-grey" onclick="append('1')">1</button></div>
+                <div class="col-3"><button class="btn btn-grey" onclick="append('2')">2</button></div>
+                <div class="col-3"><button class="btn btn-grey" onclick="append('3')">3</button></div>
+                <div class="col-3"><button class="btn btn-secondary" onclick="append('/')">÷</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col-3"><button class="btn btn-grey" onclick="append('0')">0</button></div>
+                <div class="col-3"><button class="btn btn-grey" onclick="append('00')">00</button></div>
+                <div class="col-3"><button class="btn btn-grey" onclick="append('.')">.</button></div>
+                <div class="col-3"><button class="btn btn-secondary" onclick="append('*')">x</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col-3"><button class="btn btn-dark" onclick="scientific('sin')">sin</button></div>
+                <div class="col-3"><button class="btn btn-dark" onclick="scientific('cos')">cos</button></div>
+                <div class="col-3"><button class="btn btn-dark" onclick="scientific('tan')">tan</button></div>
+                <div class="col-3"><button class="btn btn-dark" onclick="scientific('log')">log</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col-3"><button class="btn btn-dark" onclick="scientific('square')">x²</button></div>
+                <div class="col-3"><button class="btn btn-dark" onclick="scientific('sqrt')">√</button></div>
+                <div class="col-3"><button class="btn btn-dark" onclick="append('**')">^</button></div>
+                <div class="col-3"><button class="btn btn-success" onclick="calculate()">=</button></div>
+            </div>
+        </div>
+
+        <!-- this is the reference card for the calculator if the user wants to give input through his keyboard -->
+        <div class="card reference-card">
+            <div class="card-body">
+                <h5 class="card-title " style="font-family: Arial, Helvetica, sans-serif; text-decoration:underline;">
+                    Reference for Keyboard
+                    Buttons</h5>
+                <p class="card-text"
+                    style="text-align: justify; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                    <li> Use `**` for power(^).</li>
+                    <li>`s` = sin, `c` = cos, `t` = tan</li>
+                    <li>`l` = log, `q` = sqrt</li>
+                    <li>`Enter` = equals, `Esc` = clear</li>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <p style="text-align: center; color:azure ; font:600; font-family:Arial, Helvetica, sans-serif">
+        &copy; Made by Sanjay
+    </p>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
