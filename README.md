@@ -1,2 +1,2 @@
 # CalciMe
-repo for calculator. : )
+Repo for calculator. : )
