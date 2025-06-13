@@ -2,6 +2,7 @@
 <br>
 Repo for calculator. : )
 <br>
+<br>
 We can use the below function in the scrpits.js file in order to evaluate the Power(^) calculation without writing or appending ** in the expression.
 <br>
 Since Javascript language does not comprehend (^) by default as power function instead it understands (**) as that. 
